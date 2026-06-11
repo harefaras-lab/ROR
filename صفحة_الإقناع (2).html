@@ -56,6 +56,7 @@
     z-index:1;
   }
 
+  /* ===== HERO / INTRO HOOK ===== */
   .hero{
     min-height:100svh;
     display:flex;
@@ -103,6 +104,7 @@
     opacity:.6;
   }
 
+  /* ===== SECTION GENERAL ===== */
   section{
     padding:90px 0;
     position:relative;
@@ -134,6 +136,7 @@
 
   .center{text-align:center;}
 
+  /* ===== HARRY LORAYNE QUOTE ===== */
   .quote-block{
     border-right:3px solid var(--gold);
     padding:30px 32px;
@@ -151,6 +154,7 @@
   }
   .quote-block .hot{ color:var(--ember-bright); font-weight:700; }
 
+  /* ===== STORY CARDS ===== */
   .stories{
     display:grid;
     gap:28px;
@@ -206,6 +210,7 @@
     .story-avatar{ padding:18px 0; }
   }
 
+  /* ===== BENEFITS ===== */
   .benefits{
     display:grid;
     gap:16px;
@@ -224,6 +229,7 @@
   .benefit p{ color:var(--paper-dim); font-size:.98rem; }
   .benefit strong{ color:var(--paper); }
 
+  /* ===== SCIENCE EXCERPTS ===== */
   .science-grid{
     display:grid;
     gap:18px;
@@ -245,6 +251,7 @@
   }
   .science-card p{ color:var(--paper-dim); font-size:.96rem; }
 
+  /* ===== TESTIMONIALS ===== */
   .testimonials{
     display:grid;
     gap:18px;
@@ -271,6 +278,7 @@
     font-weight:700;
   }
 
+  /* ===== URGENCY / TIMER ===== */
   .urgency{
     border:1px solid var(--warn);
     border-radius:12px;
@@ -310,6 +318,7 @@
     letter-spacing:.1em;
   }
 
+  /* ===== PRICE ===== */
   .price-block{
     text-align:center;
     margin-top:40px;
@@ -336,6 +345,7 @@
     color:var(--paper-dim);
   }
 
+  /* ===== FAQ ===== */
   .faq{
     margin-top:36px;
     display:grid;
@@ -373,6 +383,7 @@
     font-size:.95rem;
   }
 
+  /* ===== STATS ===== */
   .stats{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -401,6 +412,7 @@
   }
   @media (max-width:560px){ .stats{grid-template-columns:1fr;} }
 
+  /* ===== GUARANTEE ===== */
   .guarantee{
     border:1px dashed var(--ember);
     border-radius:14px;
@@ -417,10 +429,12 @@
   }
   .guarantee p{ color:var(--paper-dim); }
 
+  /* ===== FINAL CTA ===== */
   .final{ text-align:center; padding-bottom:160px; }
   .final h2{ font-size:clamp(1.9rem,6vw,3rem); margin-bottom:20px; }
   .final p{ color:var(--paper-dim); max-width:540px; margin:0 auto 36px; font-size:1.05rem; }
 
+  /* ===== CTA BUTTON ===== */
   .cta{
     display:inline-block;
     background:linear-gradient(135deg, var(--ember-bright), var(--warn));
@@ -436,6 +450,7 @@
   .cta:hover{ transform:translateY(-3px); box-shadow:0 14px 40px rgba(232,149,74,.45); }
   .cta-sub{ display:block; margin-top:12px; font-size:.85rem; color:var(--paper-dim); }
 
+  /* ===== STICKY BAR ===== */
   .sticky-cta{
     position:fixed;
     bottom:0; left:0; right:0;
@@ -456,12 +471,14 @@
   @media (min-width:560px){ .sticky-cta span{display:inline;} }
   .sticky-cta .cta{ padding:12px 32px; font-size:.95rem; box-shadow:none; }
 
+  /* fade in on scroll */
   .reveal{ opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; }
   .reveal.in{ opacity:1; transform:translateY(0); }
 </style>
 </head>
 <body>
 
+<!-- HERO / INTRO HOOK -->
 <section class="hero">
   <div class="seal">امنحني دقيقتين فقط</div>
   <h1>أنت على بُعد <span class="glow">خطوتين فقط</span><br>من أسرار أبطال الذاكرة</h1>
@@ -471,6 +488,7 @@
 
 <div class="container">
 
+  <!-- HARRY LORAYNE -->
   <section class="reveal">
     <span class="eyebrow">قبل أن تكمل</span>
     <h2 class="section-title">ما قاله "هاري لورين" قبل أن يشرح سرّه</h2>
@@ -486,6 +504,7 @@
     </div>
   </section>
 
+  <!-- STORIES -->
   <section class="reveal">
     <span class="eyebrow">أربع قصص حقيقية</span>
     <h2 class="section-title">أشخاص عاديون صادفوا هذا السر بالصدفة</h2>
@@ -529,6 +548,7 @@
     </div>
   </section>
 
+  <!-- BENEFITS -->
   <section class="reveal">
     <span class="eyebrow">ماذا ستحصل عليه بالضبط</span>
     <h2 class="section-title">4 كتب. قواعد فقط. لا حشو.</h2>
@@ -553,6 +573,7 @@
     </div>
   </section>
 
+  <!-- SCIENCE -->
   <section class="reveal">
     <span class="eyebrow">ليست ادّعاءات — أبحاث</span>
     <h2 class="section-title">ما تقوله الدراسات</h2>
@@ -573,6 +594,7 @@
     </div>
   </section>
 
+  <!-- STATS -->
   <section class="reveal">
     <span class="eyebrow">أرقام لا كلام</span>
     <h2 class="section-title">أشخاص عاديون. نتائج حقيقية.</h2>
@@ -592,6 +614,7 @@
     </div>
   </section>
 
+  <!-- TESTIMONIALS -->
   <section class="reveal">
     <span class="eyebrow">ماذا قال من قرأها</span>
     <h2 class="section-title">تعليقات وتقييمات حقيقية 👀</h2>
@@ -599,7 +622,7 @@
     <div class="testimonials">
       <div class="testimonial">
         <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>"جربت التقنية الأولى مع ابني وهو يحفظ سور القرآن.. صدقاً انصدمت من سرعة حفظه بعدها 😅"</p>
+        <p>"جربت ��لتقنية الأولى مع ابني وهو يحفظ سور القرآن.. صدقاً انصدمت من سرعة حفظه بعدها 😅"</p>
         <div class="who">— أم لثلاثة أبناء</div>
       </div>
       <div class="testimonial">
@@ -620,6 +643,7 @@
     </div>
   </section>
 
+  <!-- URGENCY -->
   <section class="reveal" style="padding-top:0;padding-bottom:0;">
     <div class="urgency">
       <span class="label">⏳ هذا العرض بهذا السعر ينتهي خلال</span>
@@ -631,6 +655,7 @@
     </div>
   </section>
 
+  <!-- PRICE -->
   <section class="reveal center" style="padding-top:0;">
     <span class="eyebrow">القيمة مقابل السعر</span>
     <h2 class="section-title">4 كتب بسعر أقل من وجبة عشاء</h2>
@@ -641,6 +666,7 @@
     </div>
   </section>
 
+  <!-- FAQ -->
   <section class="reveal">
     <span class="eyebrow">قبل أن تسأل</span>
     <h2 class="section-title">أسئلة يطرحها كل متردد</h2>
@@ -668,6 +694,7 @@
     </div>
   </section>
 
+  <!-- GUARANTEE -->
   <section class="reveal center">
     <div class="divider"></div>
     <span class="eyebrow">إن كنت لا تزال متردداً</span>
@@ -678,8 +705,67 @@
     </div>
   </section>
 
+  <!-- FINAL CTA -->
   <section class="final reveal center">
     <h2>الخطوتان أمامك الآن</h2>
     <p>الخطوة الأولى: اضغط الزر بالأسفل. الخطوة الثانية: اقرأ. كل ما بينهما هو قرارك أنت.</p>
-    <a href="https://gumroad.com/checkout?product=dvkqg&quantity=1&referrer=https%3A%2F%2Fgumroad.com%2F&_gl=1*1n74rc0*_ga*NjYxNzU1ODExLjE3ODA3NjUxNDA.*_ga_6LJN6D94N6*czE3ODExOTE1MjYkbzMxJGcxJHQxNzgxMTkxODMwJGo2MCRsMCRoMA.." target="_blank" class="cta">ابدأ الخطوة الأولى الآن 🔥</a>
-    <span class="cta-sub">4 كتب · وصول فوري · ضمان است
+    <a href="https://gumroad.com/checkout?_gl=1*5m98xx*_ga*NjYxNzU1ODExLjE3ODA3NjUxNDA.*_ga_6LJN6D94N6*czE3ODExOTE1OTMwJG8zMiRnMSR0MTc4MTE5OTAwNSRqMzMkbDA" target="_blank" class="cta">ابدأ الخطوة الأولى الآن 🔥</a>
+    <span class="cta-sub">4 كتب · وصول فوري · ضمان استرداد 30 يوماً</span>
+  </section>
+
+</div>
+
+<!-- STICKY CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <span>أكثر من 3,400 شخص دخلوا قبلك</span>
+  <a href="https://gumroad.com/checkout?_gl=1*5m98xx*_ga*NjYxNzU1ODExLjE3ODA3NjUxNDA.*_ga_6LJN6D94N6*czE3ODExOTE1OTMwJG8zMiRnMSR0MTc4MTE5OTAwNSRqMzMkbDA" target="_blank" class="cta">ادخل الآن</a>
+</div>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.15});
+  reveals.forEach(r => io.observe(r));
+
+  const sticky = document.getElementById('stickyCta');
+  const hero = document.querySelector('.hero');
+  const stickyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(!e.isIntersecting){ sticky.classList.add('show'); }
+      else { sticky.classList.remove('show'); }
+    });
+  }, {threshold:0});
+  stickyObserver.observe(hero);
+
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.querySelectorAll('.reveal').forEach(r => r.classList.add('in'));
+  }
+
+  // Countdown timer (resets each visit to create a rolling 24h window feel,
+  // anchored to a fixed point in the day so it feels consistent)
+  function updateTimer(){
+    const now = new Date();
+    let end = new Date();
+    end.setHours(23,59,59,999);
+    let diff = end - now;
+    if(diff < 0) diff = 0;
+    const hh = Math.floor(diff / 3600000);
+    const mm = Math.floor((diff % 3600000) / 60000);
+    const ss = Math.floor((diff % 60000) / 1000);
+    document.getElementById('hh').textContent = String(hh).padStart(2,'0');
+    document.getElementById('mm').textContent = String(mm).padStart(2,'0');
+    document.getElementById('ss').textContent = String(ss).padStart(2,'0');
+  }
+  updateTimer();
+  setInterval(updateTimer, 1000);
+
+</script>
+
+</body>
+</html>
