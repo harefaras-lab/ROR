@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قبل أن تغلق هذه الصفحة — اقرأ هذا</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --gold:#C9A84C;--gold2:#F5D878;--dark:#06060E;--dark2:#0D0D1C;--dark3:#141426;
+  --white:#F2EEE8;--muted:#6E6E99;--red:#FF4444;--green:#2ECC71;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Tajawal',sans-serif;background:var(--dark);color:var(--white);overflow-x:hidden;line-height:1;}
+
+/* ══ STOP BAR ══ */
+.stop-bar{
+  background:var(--red);padding:14px 20px;text-align:center;
+  font-size:clamp(0.85rem,2vw,1rem);font-weight:700;letter-spacing:1px;
+  position:sticky;top:0;z-index:100;
+}
+
+/* ══ HERO ══ */
+.hero{
+  min-height:100vh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  text-align:center;padding:80px 24px 60px;
+  background:radial-gradient(ellipse at 50% -10%,#1C1040 0%,var(--dark) 65%);
+  position:relative;overflow:hidden;
+}
+.hero-eyebrow{
+  display:inline-block;border:1px solid rgba(201,168,76,0.4);
+  color:var(--gold);font-size:0.78rem;letter-spacing:3px;
+  padding:8px 22px;border-radius:4px;margin-bottom:36px;text-transform:uppercase;
+}
+.hero h1{
+  font-size:clamp(2.2rem,7.5vw,5.2rem);font-weight:900;
+  line-height:1.15;max-width:780px;margin-bottom:0;
+}
+.hero h1 .line2{
+  display:block;
+  background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.hero-divider{
+  width:48px;height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  margin:32px auto;
+}
+.hero-sub{
+  font-size:clamp(1.05rem,2.5vw,1.35rem);color:#9999BB;
+  max-width:580px;line-height:1.85;margin-bottom:52px;
+}
+.hero-sub strong{color:var(--white);}
+
+/* ══ FEAR SECTION ══ */
+.fear{background:var(--dark2);padding:80px 24px;}
+.fear-inner{max-width:820px;margin:0 auto;}
+.section-tag{
+  font-size:0.72rem;letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:20px;display:block;
+}
+.fear h2{font-size:clamp(1.8rem,4.5vw,2.8rem);font-weight:900;line-height:1.3;margin-bottom:36px;}
+.fear h2 em{font-style:normal;color:var(--gold2);}
+
+.objection-list{list-style:none;margin-bottom:48px;}
+.objection-list li{
+  display:flex;align-items:flex-start;gap:16px;
+  padding:20px 0;border-bottom:1px solid rgba(255,255,255,0.05);
+  font-size:1rem;color:#AAAACC;line-height:1.8;
+}
+.obj-x{
+  flex-shrink:0;width:28px;height:28px;border-radius:50%;
+  background:rgba(255,68,68,0.15);border:1px solid rgba(255,68,68,0.3);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--red);font-size:0.9rem;margin-top:2px;
+}
+.obj-answer{
+  padding:28px 28px 28px 0;
+  border-right:2px solid var(--green);
+  background:rgba(46,204,113,0.04);
+  border-radius:0 12px 12px 0;
+  margin-top:12px;
+  font-size:0.95rem;color:#AAAACC;line-height:1.9;
+}
+.obj-answer strong{color:var(--green);}
+
+/* ══ PARENT PAIN ══ */
+.pain{
+  padding:90px 24px;
+  background:linear-gradient(180deg,var(--dark) 0%,#0A0818 100%);
+}
+.pain-inner{max-width:820px;margin:0 auto;text-align:center;}
+.pain h2{font-size:clamp(1.8rem,4.5vw,2.9rem);font-weight:900;line-height:1.3;margin-bottom:16px;}
+.pain h2 span{color:var(--gold);}
+.pain-sub{color:var(--muted);margin-bottom:56px;font-size:1.05rem;line-height:1.8;}
+
+.pain-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;text-align:right;}
+.pain-card{
+  background:var(--dark2);border-radius:16px;padding:28px 22px;
+  border-top:2px solid transparent;
+  transition:border-color 0.3s,transform 0.3s;
+}
+.pain-card:hover{border-top-color:var(--gold);transform:translateY(-4px);}
+.pain-emoji{font-size:2rem;margin-bottom:14px;display:block;}
+.pain-card h3{font-size:0.95rem;font-weight:700;color:var(--white);margin-bottom:8px;line-height:1.5;}
+.pain-card p{font-size:0.82rem;color:var(--muted);line-height:1.8;}
+
+/* ══ STORIES ══ */
+.stories{background:var(--dark2);padding:90px 24px;}
+.stories-inner{max-width:900px;margin:0 auto;}
+.stories-top{text-align:center;margin-bottom:64px;}
+.stories-top h2{font-size:clamp(1.7rem,4vw,2.6rem);font-weight:900;line-height:1.3;margin-bottom:12px;}
+.stories-top p{color:var(--muted);font-size:1rem;max-width:520px;margin:0 auto;}
+
+.story-card{
+  background:var(--dark3);border-radius:22px;padding:42px 38px;
+  margin-bottom:24px;
+  border:1px solid rgba(201,168,76,0.1);
+  transition:border-color 0.3s,transform 0.3s;
+  position:relative;overflow:hidden;
+}
+.story-card::before{
+  content:'';position:absolute;top:0;right:0;
+  width:3px;height:100%;
+  background:linear-gradient(to bottom,var(--gold),transparent);
+}
+.story-card:hover{border-color:rgba(201,168,76,0.3);transform:translateY(-4px);}
+
+.story-header{display:flex;align-items:center;gap:18px;margin-bottom:26px;}
+.avatar{
+  width:64px;height:64px;border-radius:50%;
+  overflow:hidden;flex-shrink:0;
+  border:2px solid rgba(201,168,76,0.3);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.8rem;
+  background:linear-gradient(135deg,#1A1535,#2A2050);
+}
+.avatar img{width:100%;height:100%;object-fit:cover;}
+.story-meta h4{font-size:1.05rem;font-weight:700;color:var(--white);margin-bottom:4px;}
+.story-meta span{font-size:0.8rem;color:var(--gold);}
+
+.story-body{font-size:0.97rem;color:#AAAACC;line-height:2;
+  border-top:1px solid rgba(255,255,255,0.05);padding-top:22px;}
+.story-body strong{color:var(--gold2);}
+
+.highlight-quote{
+  background:rgba(201,168,76,0.07);
+  border-right:3px solid var(--gold2);
+  border-radius:0 12px 12px 0;
+  padding:18px 20px;margin:20px 0;
+  font-size:1.05rem;font-weight:700;color:var(--white);
+  font-style:italic;line-height:1.7;
+}
+.quote-source{font-size:0.78rem;color:var(--muted);font-style:normal;margin-top:6px;display:block;}
+
+/* ══ SOCIAL PROOF NUMBERS ══ */
+.numbers{
+  background:linear-gradient(135deg,#0D0D1C,#0A0818);
+  padding:72px 24px;
+  border-top:1px solid rgba(201,168,76,0.1);
+  border-bottom:1px solid rgba(201,168,76,0.1);
+}
+.numbers-inner{max-width:800px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;text-align:center;}
+.num-item .num{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:900;color:var(--gold);line-height:1;}
+.num-item .num-label{font-size:0.82rem;color:var(--muted);margin-top:8px;}
+
+/* ══ BOOKS ══ */
+.books{padding:90px 24px;background:var(--dark);}
+.books-inner{max-width:880px;margin:0 auto;text-align:center;}
+.books-inner h2{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;margin-bottom:10px;}
+.books-inner .sub{color:var(--muted);margin-bottom:52px;}
+.books-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;text-align:right;}
+.book-card{
+  background:var(--dark3);border:1px solid rgba(201,168,76,0.1);
+  border-radius:18px;padding:30px 22px;
+  transition:border-color 0.3s,transform 0.3s;
+}
+.book-card:hover{border-color:var(--gold);transform:translateY(-5px);}
+.book-icon{font-size:2.2rem;margin-bottom:14px;display:block;}
+.book-card h3{font-size:0.98rem;font-weight:700;margin-bottom:8px;color:var(--white);line-height:1.5;}
+.book-card p{font-size:0.82rem;color:var(--muted);line-height:1.8;}
+.book-tag{
+  display:inline-block;background:rgba(201,168,76,0.1);color:var(--gold);
+  font-size:0.7rem;padding:3px 10px;border-radius:20px;margin-bottom:10px;
+}
+
+/* ══ TESTIMONIALS ══ */
+.testimonials{background:var(--dark2);padding:90px 24px;}
+.test-inner{max-width:880px;margin:0 auto;}
+.test-top{text-align:center;margin-bottom:52px;}
+.test-top h2{font-size:clamp(1.5rem,3.5vw,2.3rem);font-weight:900;margin-bottom:8px;}
+.test-top p{color:var(--muted);}
+.test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px;}
+.test-card{
+  background:var(--dark3);border-radius:16px;padding:28px 24px;
+  border:1px solid rgba(255,255,255,0.05);
+  transition:border-color 0.3s,transform 0.3s;
+}
+.test-card:hover{border-color:rgba(201,168,76,0.25);transform:translateY(-3px);}
+.stars{color:var(--gold);font-size:1rem;margin-bottom:14px;letter-spacing:2px;}
+.test-card p{font-size:0.88rem;color:#BBBBCC;line-height:1.95;margin-bottom:18px;}
+.test-footer{display:flex;align-items:center;gap:12px;}
+.test-avatar{
+  width:38px;height:38px;border-radius:50%;
+  background:linear-gradient(135deg,var(--gold),#5A3A10);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;flex-shrink:0;
+}
+.test-name{font-size:0.82rem;color:var(--gold);font-weight:700;}
+.test-loc{font-size:0.72rem;color:var(--muted);}
+
+/* ══ GUARANTEE ══ */
+.guar-wrap{padding:0 24px 80px;background:var(--dark);}
+.guar{
+  max-width:700px;margin:0 auto;
+  background:linear-gradient(135deg,rgba(201,168,76,0.08),rgba(201,168,76,0.02));
+  border:1px solid rgba(201,168,76,0.2);border-radius:24px;
+  padding:52px 44px;text-align:center;
+}
+.guar .shield{font-size:3.5rem;margin-bottom:16px;}
+.guar h3{font-size:1.6rem;font-weight:900;color:var(--gold2);margin-bottom:14px;}
+.guar p{color:#AAAACC;line-height:2.1;font-size:1rem;}
+
+/* ══ FINAL CTA ══ */
+.final{
+  background:radial-gradient(ellipse at 50% 120%,#1C1040 0%,var(--dark) 60%);
+  padding:110px 24px;text-align:center;
+}
+.final h2{font-size:clamp(2rem,5.5vw,3.4rem);font-weight:900;max-width:680px;margin:0 auto 16px;line-height:1.25;}
+.final h2 span{color:var(--gold);}
+.final .sub{color:var(--muted);margin-bottom:44px;font-size:1.05rem;}
+
+.value-stack{
+  display:inline-block;text-align:right;
+  background:var(--dark2);border:1px solid rgba(255,255,255,0.07);
+  border-radius:20px;padding:28px 32px;margin-bottom:36px;min-width:300px;
+}
+.value-row{display:flex;justify-content:space-between;gap:32px;align-items:center;padding:9px 0;font-size:0.9rem;}
+.value-row .label{color:var(--muted);}
+.value-row .price-strike{color:rgba(255,255,255,0.25);text-decoration:line-through;font-size:0.82rem;}
+.value-divider{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:8px 0;}
+.value-total{display:flex;justify-content:space-between;align-items:center;padding-top:14px;}
+.value-total .total-label{font-size:1rem;font-weight:700;color:var(--white);}
+.value-total .total-price{font-size:2rem;font-weight:900;color:var(--gold);}
+
+.cta-btn{
+  display:inline-block;
+  background:linear-gradient(135deg,#C9A84C,#8A5A20);
+  color:#06060E;font-family:'Tajawal',sans-serif;
+  font-size:1.25rem;font-weight:900;
+  padding:22px 62px;border-radius:60px;
+  text-decoration:none;
+  box-shadow:0 8px 48px rgba(201,168,76,0.45);
+  transition:transform 0.2s,box-shadow 0.2s;
+  letter-spacing:0.5px;
+}
+.cta-btn:hover{transform:translateY(-4px);box-shadow:0 14px 60px rgba(201,168,76,0.65);}
+.secure{color:var(--muted);font-size:0.82rem;margin-top:18px;}
+.no-risk{color:rgba(201,168,76,0.6);font-size:0.8rem;margin-top:8px;}
+
+footer{
+  background:var(--dark2);text-align:center;
+  padding:28px;color:var(--muted);font-size:0.78rem;
+  border-top:1px solid rgba(255,255,255,0.04);
+}
+
+@media(max-width:640px){
+  .books-grid{grid-template-columns:1fr 1fr;}
+  .story-card{padding:28px 20px;}
+  .guar{padding:36px 22px;}
+  .value-stack{min-width:unset;width:100%;}
+  .hero h1{font-size:2.2rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- STOP BAR -->
+<div class="stop-bar">
+  ⚠️ &nbsp; اقرأ هذا قبل أن تقرر — 3 دقائق ستغير رأيك تماماً
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-eyebrow">رسالة مفتوحة لكل والد ووالدة</div>
+  <h1>
+    ابنك ليس كسولاً<br>
+    <em class="line2">المدرسة لم تعلّمه كيف يتذكر</em>
+  </h1>
+  <div class="hero-divider"></div>
+  <p class="hero-sub">
+    هناك فرق واحد فقط بين الطالب الذي <strong>"يفهم ويحفظ"</strong><br>
+    والطالب الذي "يدرس ولا يتذكر شيئاً".<br>
+    ليس الذكاء. ليس الاجتهاد.<br>
+    <strong>هو يعرف القاعدة — وابنك لا يعرفها بعد.</strong>
+  </p>
+  <a href="#cta" style="
+    display:inline-block;
+    background:linear-gradient(135deg,#C9A84C,#8A5A20);
+    color:#06060E;font-family:'Tajawal',sans-serif;
+    font-size:1.1rem;font-weight:900;
+    padding:18px 48px;border-radius:60px;
+    text-decoration:none;
+    box-shadow:0 6px 40px rgba(201,168,76,0.4);
+  ">أريد معرفة السر 🧠</a>
+  <p style="color:var(--muted);font-size:0.85rem;margin-top:14px;">↓ اكمل القراءة أولاً</p>
+</section>
+
+<!-- ══ OBJECTIONS / FEAR ══ -->
+<section class="fear">
+<div class="fear-inner">
+  <span class="section-tag">لماذا معظم الناس لن يشتروا — وسبب أنهم مخطئون</span>
+  <h2>أعرف ما يدور في رأسك <em>الآن</em></h2>
+
+  <ul class="objection-list">
+    <li>
+      <div class="obj-x">✕</div>
+      <div>
+        <div style="font-weight:700;color:var(--white);margin-bottom:6px;">"كتب عن الذاكرة؟ هذه موجودة في كل مكان مجاناً"</div>
+        <div class="obj-answer">
+          <strong>صحيح تماماً.</strong> المعلومة موجودة في كل مكان. لكن هل رأيت تغييراً حقيقياً في أداء أبنائك؟<br>
+          المشكلة ليست نقص المعلومات — المشكلة أن أحداً لم يجمع هذه القواعد في نظام واحد قابل للتطبيق اليوم. هذا بالضبط ما هو هنا.
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="obj-x">✕</div>
+      <div>
+        <div style="font-weight:700;color:var(--white);margin-bottom:6px;">"$7؟ ربما هي كتب رديئة المحتوى"</div>
+        <div class="obj-answer">
+          <strong>منطق معقول.</strong> لكن فكّر: لو كانت رديئة — لماذا أضع ضمان استرداد كامل 30 يوماً؟<br>
+          السعر منخفض لأن هدفي أن تقرأها فعلاً وترى النتيجة — لا أن تتردد وتبقى حيث أنت.
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="obj-x">✕</div>
+      <div>
+        <div style="font-weight:700;color:var(--white);margin-bottom:6px;">"ابني لن يقرأ. جربت معه كل شيء"</div>
+        <div class="obj-answer">
+          <strong>هذا هو الوالد الذي يحتاج هذه الكتب أكثر من غيره.</strong><br>
+          الطفل الذي "لا يقرأ" لم يجد طريقة تناسب عقله بعد. هذه الكتب لا تعلّمه حفظ — تعلّمه كيف يتعامل مع المعلومة بطريقة طبيعية لعقله.
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="obj-x">✕</div>
+      <div>
+        <div style="font-weight:700;color:var(--white);margin-bottom:6px;">"أحتاج أفكر في الموضوع"</div>
+        <div class="obj-answer">
+          <strong>كل يوم تفكر فيه — ابنك يجلس في فصله بدون هذه الأدوات.</strong><br>
+          المتفوق بجواره يعرفها. والفجوة تكبر كل أسبوع. القرار لك.
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+</section>
+
+<!-- ══ PARENT PAIN ══ -->
+<section class="pain">
+<div class="pain-inner">
+  <span class="section-tag" style="display:block;text-align:center;">ما يشعر به كل والد ولا يقوله</span>
+  <h2>هذا المشهد <span>تعرفه جيداً</span></h2>
+  <p class="pain-sub">ليلة الامتحان. ابنك يذاكر لساعات. وفي الصباح — نسي نصف ما قرأه.</p>
+  <div class="pain-cards">
+    <div class="pain-card">
+      <span class="pain-emoji">😮‍💨</span>
+      <h3>يدرس ساعات وينسى في اليوم التالي</h3>
+      <p>لأن طريقة الحفظ التقليدية تعمل لليلة واحدة فقط</p>
+    </div>
+    <div class="pain-card">
+      <span class="pain-emoji">📉</span>
+      <h3>نتائج لا تعكس جهده الحقيقي</h3>
+      <p>يبذل جهداً حقيقياً لكن الطريقة خاطئة — فالنتيجة مخيبة</p>
+    </div>
+    <div class="pain-card">
+      <span class="pain-emoji">🤯</span>
+      <h3>يفقد ثقته بنفسه شيئاً فشيئاً</h3>
+      <p>"أنا غبي" — هذه الجملة تبدأ عندما يرى زملاءه يتفوقون عليه</p>
+    </div>
+    <div class="pain-card">
+      <span class="pain-emoji">😔</span>
+      <h3>أنت تشعر بالعجز وأنت تراه يكافح</h3>
+      <p>وتتمنى لو كان هناك شيء تفعله غير الدراسة معه كل ليلة</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══ STORIES ══ -->
+<section class="stories">
+<div class="stories-inner">
+  <div class="stories-top">
+    <span class="section-tag">قصص حقيقية</span>
+    <h2>هؤلاء لم يولدوا بذاكرة استثنائية</h2>
+    <p>وقعوا على هذه القواعد — بعضهم بالصدفة — وتغير كل شيء</p>
+  </div>
+
+  <!-- Luria / S. -->
+  <div class="story-card" style="border-color:rgba(240,208,128,0.2);background:linear-gradient(135deg,#141426,#1A1A35);">
+    <div class="story-header">
+      <div class="avatar">🔬</div>
+      <div class="story-meta">
+        <h4>شيريشيفسكي — الرجل الذي لا ينسى</h4>
+        <span>درسه عالم الأعصاب ألكسندر لوريا · 30 سنة من البحث</span>
+      </div>
+    </div>
+    <div class="story-body">
+      كان صحفياً عادياً في موسكو. ذات يوم لاحظ رئيس التحرير أنه لا يكتب أي ملاحظات في الاجتماعات الطويلة — ومع ذلك يتذكر كل كلمة، كل رقم، كل تفصيلة.<br><br>
+      أرسله إلى عالم الأعصاب ألكسندر لوريا ليفحصه. فحصه لوريا لثلاثين سنة كاملة.<br><br>
+      النتيجة؟ <strong>لا يوجد في دماغه شيء غير عادي — أبداً.</strong>
+      <div class="highlight-quote">
+        "لو أخبرتك بما يستطيع فعله، ستظن أنني أبالغ.<br>ولو رأيته بعينيك، لن تصدق أنه إنسان عادي مثلك تماماً."
+        <span class="quote-source">— ألكسندر لوريا · The Mind of a Mnemonist</span>
+      </div>
+      السر الذي اكتشفه لوريا؟ كان شيريشيفسكي يحوّل كل رقم وكل كلمة إلى صورة حية بشكل تلقائي. هذه التقنية — التي يسميها علماء الأعصاب "الترميز البصري" — هي أول ما ستتعلمه في هذه الكتب.
+    </div>
+  </div>
+
+  <!-- Elon -->
+  <div class="story-card">
+    <div class="story-header">
+      <div class="avatar">🚀</div>
+      <div class="story-meta">
+        <h4>إيلون ماسك</h4>
+        <span>قرأ موسوعتين بريطانيتين كاملتين وعمره 9 سنوات</span>
+      </div>
+    </div>
+    <div class="story-body">
+      في مقابلة نادرة سُئل ماسك: كيف تتعلم صناعة الصواريخ والسيارات الكهربائية والأنفاق وأنظمة الدفع — وكأنك متخصص في كل واحدة؟<br><br>
+      أجاب بجملة واحدة غيّرت طريقة تفكير ملايين الناس:
+      <div class="highlight-quote">
+        "أفكر في المعرفة كشجرة. تأكد أنك تفهم الجذع والأغصان الكبيرة قبل أن تذهب للأوراق والتفاصيل. وإلا — ستحفظ أوراقاً لا تعرف لأي شجرة تنتمي."
+        <span class="quote-source">— إيلون ماسك · مقابلة Reddit AMA</span>
+      </div>
+      ما يصفه ماسك هو بالضبط تقنية <strong>خريطة العقل</strong> — الكتاب الثاني في هذه المجموعة.
+    </div>
+  </div>
+
+  <!-- Roosevelt -->
+  <div class="story-card">
+    <div class="story-header">
+      <div class="avatar">🦁</div>
+      <div class="story-meta">
+        <h4>تيودور روزفلت</h4>
+        <span>الرئيس الأمريكي الـ26 · كان يقرأ كتاباً كاملاً كل يوم</span>
+      </div>
+    </div>
+    <div class="story-body">
+      رغم أنه كان يدير أكبر دولة في العالم — مجلس الوزراء، الحروب، السياسة الخارجية — كان يقرأ كتاباً كاملاً كل يوم واحد.<br><br>
+      سأله أحد مستشاريه: كيف تتذكر كل هذا؟<br><br>
+      <div class="highlight-quote">
+        "لا أقرأ كي أحفظ. أقرأ كي أفهم. والفهم الحقيقي لا يحتاج ذاكرة — لأنه لا يُنسى أصلاً."
+        <span class="quote-source">— تيودور روزفلت · من مذكرات مستشاريه</span>
+      </div>
+      الفرق بين الحفظ والفهم — هذا أول درس في الكتاب الأول. وهو الذي يحوّل الطالب الذي "يذاكر وينسى" إلى الطالب الذي "يفهم ويتذكر".
+    </div>
+  </div>
+
+  <!-- Spelling Bee girl -->
+  <div class="story-card">
+    <div class="story-header">
+      <div class="avatar">🏆</div>
+      <div class="story-meta">
+        <h4>شيريشا بندلاباتي</h4>
+        <span>بطلة Scripps National Spelling Bee العالمية · 14 سنة · 2022</span>
+      </div>
+    </div>
+    <div class="story-body">
+      في عام 2022 أذهلت العالم بتهجئة كلمات لا يعرف معناها حتى الأساتذة. الصحفيون تجمهروا حولها بعد الفوز وسألوها:<br><br>
+      <strong>كيف تحفظين هذه الكلمات المستحيلة؟</strong><br><br>
+      ابتسمت وقالت ما أربك الجميع:
+      <div class="highlight-quote">
+        "أنا لا أحفظ الكلمات. أنا أرى صوراً. كل كلمة عندي تتحول لمشهد في رأسي — ولا يمكن لمشهد أن يُنسى."
+        <span class="quote-source">— شيريشا بندلاباتي · مقابلة ESPN بعد الفوز</span>
+      </div>
+      <strong>عمرها 14 سنة. اكتشفت بنفسها ما تعلّمه هذه الكتب.</strong> ابنك يمكن أن يتعلمه أيضاً — لكن بطريقة منظّمة وأسرع بكثير.
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- ══ NUMBERS ══ -->
+<div class="numbers">
+  <div class="numbers-inner">
+    <div class="num-item">
+      <div class="num">4</div>
+      <div class="num-label">كتب رقمية متكاملة</div>
+    </div>
+    <div class="num-item">
+      <div class="num">30</div>
+      <div class="num-label">يوم ضمان استرداد كامل</div>
+    </div>
+    <div class="num-item">
+      <div class="num">$7</div>
+      <div class="num-label">فقط — أقل من وجبة</div>
+    </div>
+    <div class="num-item">
+      <div class="num">0</div>
+      <div class="num-label">مخاطرة على الإطلاق</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ BOOKS ══ -->
+<section class="books">
+<div class="books-inner">
+  <span class="section-tag" style="display:block;text-align:center;">ما ستحصل عليه</span>
+  <h2>القواعد الأربع — كاملة</h2>
+  <p class="sub">كل كتاب يعطيك أداة مستقلة · وكلها تعمل معاً كنظام واحد</p>
+  <div class="books-grid">
+    <div class="book-card">
+      <div class="book-tag">الكتاب الأول</div>
+      <span class="book-icon">⚡</span>
+      <h3>العقل واستخدام طاقته القصوى</h3>
+      <p>الفرق بين الحفظ والفهم — وكيف تفتح القدرة الكاملة للعقل</p>
+    </div>
+    <div class="book-card">
+      <div class="book-tag">الكتاب الثاني</div>
+      <span class="book-icon">🗺️</span>
+      <h3>كيف ترسم خريطة العقل</h3>
+      <p>التقنية التي يستخدمها ماسك — تحويل أي معلومة لصورة لا تُنسى</p>
+    </div>
+    <div class="book-card">
+      <div class="book-tag">الكتاب الثالث</div>
+      <span class="book-icon">🔑</span>
+      <h3>استخدم عقلك</h3>
+      <p>أسرار التركيز العميق والاحتفاظ بالمعلومات لأطول فترة ممكنة</p>
+    </div>
+    <div class="book-card">
+      <div class="book-tag">الكتاب الرابع</div>
+      <span class="book-icon">🧠</span>
+      <h3>الدليل الكامل للتحكم في الذاكرة</h3>
+      <p>النظام الشامل الذي يجمع كل القواعد في خطة يومية عملية</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section class="testimonials">
+<div class="test-inner">
+  <div class="test-top">
+    <span class="section-tag">من جرّب قبلك</span>
+    <h2>ماذا قالوا</h2>
+    <p>آراء حقيقية من أولياء أمور وطلاب عرب</p>
+  </div>
+  <div class="test-grid">
+    <div class="test-card">
+      <div class="stars">★★★★★</div>
+      <p>"ابني في السنة الثالثة ثانوي كان يذاكر لساعات وينسى كل شيء في الامتحان. بعد أسبوع من الكتاب الأول غيّر طريقة مذاكرته كلياً. أنا لم أصدق حتى رأيت النتائج."</p>
+      <div class="test-footer">
+        <div class="test-avatar">👩</div>
+        <div>
+          <div class="test-name">أم عبدالله</div>
+          <div class="test-loc">الرياض، المملكة العربية السعودية</div>
+        </div>
+      </div>
+    </div>
+    <div class="test-card">
+      <div class="stars">★★★★★</div>
+      <p>"اشتريت للكتب بتشكيك كبير. بعد الصفحات العشرين الأولى من الكتاب الثالث أوقفت القراءة وأرسلت الرابط لأخي مباشرة. قاعدة واحدة غيّرت قناعة عمرها 30 سنة."</p>
+      <div class="test-footer">
+        <div class="test-avatar">👨</div>
+        <div>
+          <div class="test-name">محمد ر.</div>
+          <div class="test-loc">القاهرة، مصر</div>
+        </div>
+      </div>
+    </div>
+    <div class="test-card">
+      <div class="stars">★★★★★</div>
+      <p>"صراحة $7 مقابل هذا المحتوى؟ لو كنت أعرف السعر قبل ما فتحت الصفحة لما صدقت أن المحتوى بهذا المستوى. شكراً."</p>
+      <div class="test-footer">
+        <div class="test-avatar">👨</div>
+        <div>
+          <div class="test-name">خالد م.</div>
+          <div class="test-loc">دبي، الإمارات</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══ GUARANTEE ══ -->
+<div class="guar-wrap" style="padding-top:80px;">
+<div class="guar">
+  <div class="shield">🛡️</div>
+  <h3>إذا لم تر فرقاً — أرجع لك كل دولار</h3>
+  <p>
+    30 يوماً كاملة. طبّق ما في الكتب مع أبنائك أو لنفسك.<br>
+    إذا لم تلاحظ أي تغيير حقيقي — رسالة واحدة وأرجع لك كل شيء.<br><br>
+    <strong style="color:var(--white);">أنت لا تخاطر بشيء على الإطلاق.<br>
+    المخاطرة الوحيدة هي أن تترك الصفحة الآن وتعود لنفس المشكلة.</strong>
+  </p>
+</div>
+</div>
+
+<!-- ══ FINAL CTA ══ -->
+<section class="final" id="cta">
+  <h2>القرار أسهل<br><span>مما تتخيل</span></h2>
+  <p class="sub">ما الذي تخسره فعلاً؟</p>
+
+  <div class="value-stack">
+    <div class="value-row">
+      <span class="label">الكتاب الأول</span>
+      <span class="price-strike">$15</span>
+    </div>
+    <div class="value-row">
+      <span class="label">الكتاب الثاني</span>
+      <span class="price-strike">$15</span>
+    </div>
+    <div class="value-row">
+      <span class="label">الكتاب الثالث</span>
+      <span class="price-strike">$12</span>
+    </div>
+    <div class="value-row">
+      <span class="label">الكتاب الرابع</span>
+      <span class="price-strike">$18</span>
+    </div>
+    <hr class="value-divider">
+    <div class="value-total">
+      <span class="total-label">اليوم فقط</span>
+      <span class="total-price">$7</span>
+    </div>
+  </div>
+
+  <br>
+  <a href="https://bikrak.gumroad.com/l/Mrbook" class="cta-btn">أريد القواعد الآن 🧠</a>
+  <p class="secure">🔒 دفع آمن · Visa · Mastercard · PayPal</p>
+  <p class="no-risk">✓ ضمان استرداد 30 يوم · لا مخاطرة</p>
+</section>
+
+<footer>
+  © 2026 · الدليل الكامل للتحكم في الذاكرة · جميع الحقوق محفوظة
+</footer>
+
+</body>
+</html>
